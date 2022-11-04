@@ -11,10 +11,14 @@ pipeline {
 	}
     stages {
     	stage('build') {
-		writeToFile('file.txt')
+		steps{
+			writeToFile('file.txt')
+		}
 	}
 	stage('test') {
-		sh "cat file.txt | grep 2022"
+		steps{
+			sh "cat file.txt | grep 2022"
+		}
 	}
     }
 }
