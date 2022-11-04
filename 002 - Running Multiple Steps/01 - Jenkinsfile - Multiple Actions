@@ -1,7 +1,5 @@
 def writeToFile (text = '') {
-	touch "$text"
-	"date > $text"
-	"cat $text"
+	sh "date > $text"
 }
 
 pipeline {
